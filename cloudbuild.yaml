@@ -20,7 +20,7 @@ steps:
   - --filename=kubernetes/
   - --image=gcr.io/terraform-test-336308/github.com/nsd9696/terraform-gcp-test:latest
   - --location=asia-northeast2
-  - --cluster=cluster-1
+  - --cluster=terraform-test-336308-gke
   - --timeout=2000s
   timeout: 1200s
 timeout: 2000s
