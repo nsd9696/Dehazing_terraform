@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terraform-gcp-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: terraform-gcp-test
+  template:
+    metadata:
+      labels:
+        app: terraform-gcp-test
+    spec:
+      containers:
+      - name: terraform-app
+        image: gcr.io/terraform-test-336308/github.com/nsd9696/terraform-gcp-test:latest
+        ports:
+        - containerPort: 8501
